@@ -1,3 +1,4 @@
+import React from "react";
 import { HeroUIProvider } from "@heroui/system";
 
 export function Provider({ children }: { children: React.ReactNode }) {

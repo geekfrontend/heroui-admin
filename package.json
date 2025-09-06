@@ -7,7 +7,15 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint --fix",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky",
+    "format": "prettier --write ."
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,js,jsx,json,css}": [
+      "eslint --fix --max-warnings=0",
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@heroui/button": "2.2.20",
@@ -41,22 +49,24 @@
     "@types/node": "20.5.7",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
-    "@typescript-eslint/eslint-plugin": "8.31.1",
-    "@typescript-eslint/parser": "8.31.1",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.31.1",
     "@vitejs/plugin-react": "4.4.1",
     "autoprefixer": "10.4.21",
     "eslint": "9.25.1",
-    "eslint-config-prettier": "9.1.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prettier": "5.2.1",
+    "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "5.2.0",
     "eslint-plugin-unused-imports": "4.1.4",
     "globals": "16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
     "postcss": "8.5.3",
-    "prettier": "3.5.3",
+    "prettier": "^3.5.3",
     "typescript": "5.6.3",
     "vite": "5.2.0",
     "vite-tsconfig-paths": "4.3.2"
